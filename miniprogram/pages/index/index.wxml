@@ -2,21 +2,30 @@
 <view class="container">
 
   <!-- 用户 openid -->
-  <view class="userinfo">
+  <view class="userinfo" >
     <button 
       open-type="getUserInfo" 
       bindgetuserinfo="onGetUserInfo"
       class="userinfo-avatar"
       style="background-image: url({{avatarUrl}})"
     ></button>
+    <text class="userinfo_name">{{userInfo}}</text>
     <!-- <view>
       <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
     </view> -->
   </view>
 
 
-  <!-- 上传图片 -->
-    <button class="uploader">图片操作</button>
+  <!-- 功能 -->
+    <view class="features" >
+    <ul>
+    <li><text>图片操作</text></li>
+    <li><text>网络操作</text></li>
+    <li><text>视频操作</text></li>
+    <li><text>数据操作</text></li>
+    <li><text>特效操作</text></li>
+    </ul>
+    </view>
    
     <!-- <view class="uploader-container" wx:if="{{imgUrl}}">
       <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image> 

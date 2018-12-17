@@ -5,46 +5,82 @@ page {
   flex-direction:column;
   justify-content: baseline;
 }
+text{
+font-size: 18px;
+text-align: center;
+margin: auto;
+color: #333333;
+}
+ul{
+ width: 100%;
+ height:  auto;
+}
+ul li{
+ width: 100%;
+ height: 80px;
+ margin-top: 40px;
+ margin-bottom: 40px;
+ display:grid;
+}
+ul li text {
+ width: 98%;
+ height: 100%;
+ margin: auto;
+ border-radius: 15rpx;
+ text-align: center;
+ vertical-align :middle;
+ background-color: #dfdbdbf8; 
+ font-size: 20px;
+}
+ul li text:active{
+ width: 98%;
+ text-align: center;
+ height: 80px;
+ margin: auto;
+ border-radius: 15rpx;
+ background-color:aqua; 
+ font-size: 20px;
+}
+
+
+
 .container{
 width: 100%;
 padding-top: 30px;
 }
+
 .userinfo{
-  width: 100%;
-  height: 100px;
-  background-color: salmon;
-}
-.userinfo button{
-  width: 100rpx;
-  height: 100rpx;
-  margin: auto;
-  float: left;
-   border-radius: 50%;
-   background-color: cyan;
-   background-size: cover;
-}
-/* 
-
-
-.userinfo, .uploader, .tunnel {
-  margin-top: 40rpx;
+ border-radius: 15rpx;
+  width: 98%;
+  margin:auto;
   height: 140rpx;
-  width: 100%;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-left: none;
-  border-right: none;
-  display: flex;
-  flex-direction: row;
   align-items: center;
-  transition: all 300ms ease;
+  background: #dfdbdbf8;
+  position: relative;
+    vertical-align: middle;
 }
-
-.userinfo-avatar {
+.userinfo button{/*微信头像*/
   width: 100rpx;
   height: 100rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-  background-size: cover;
-  background-color: white;
-} */
+   border-radius: 50%;
+   margin-left: auto;
+   position: absolute;
+   margin-right: auto;
+   top: 50%;
+   float: left;
+   background-size: cover;
+   transform: translate(10%,-50%);
+}
+.userinfo_name{
+width: auto;
+height: 140rpx;
+display:flex;
+margin-left: 140rpx;
+text-align: center;
+align-items: center;
+}
+
+.features{
+ width:100%;
+  text-align: center;
+}
