@@ -1,0 +1,27 @@
+/* miniprogram/pages/videos/videos.wxss */
+
+.title{
+  width: 100%;
+  height:auto; 
+  text-align: center;
+}
+
+
+.item {
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.videoTitle{
+  text-align: center;
+  font-size: 18px;
+  color:gray;
+  width: 90%;
+}
+
+.videoSubTitle{
+  text-align: left;
+  font-size: 12px;
+  width:90%;
+  padding-left: 5%;
+}

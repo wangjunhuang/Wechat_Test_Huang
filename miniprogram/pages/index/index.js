@@ -26,6 +26,9 @@ Page({
         })
         break;
         case 2://视频操作
+        wx.navigateTo({
+          url: '../videos/videos',
+        })
         break;
         case 3://数据操作
         break;
@@ -34,5 +37,7 @@ Page({
 
     }
   }
+
+
 
 })

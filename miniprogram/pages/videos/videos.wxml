@@ -1,0 +1,13 @@
+<!--miniprogram/pages/videos/videos.wxml-->
+<view class='title'><text>视频列表</text></view>
+<view class='container'>
+<scroll-view>
+<block wx:for="{{videoItems}}">
+    <view class='item'>
+      <image src='{{item.image}}'></image>
+      <view class='videoTitle'>{{item.title}}</view>
+      <view class='videoSubTitle'>{{item.subTitle}}</view>
+    </view>
+  </block>
+</scroll-view>
+</view>

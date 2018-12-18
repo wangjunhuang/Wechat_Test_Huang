@@ -5,7 +5,8 @@
     "pages/index/index",
     "pages/storageConsole/storageConsole",
     "pages/image/image",
-    "pages/sockect/sockect"
+    "pages/sockect/sockect",
+    "pages/videos/videos"
   ],
   "window": {
     "disableScroll": true,

@@ -21,9 +21,10 @@
     <ul>
     <li bindtap="featuresChoose" id="0">图片操作</li>
     <li>网络操作</li>
-    <li>视频操作</li>
+    <li bindtap="featuresChoose" id="2">视频操作</li>
     <li>数据操作</li>
     <li>特效操作</li>
+
     </ul>
     </view>
    
