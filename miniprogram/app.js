@@ -1,5 +1,10 @@
 //app.js
 App({
+  globalData:{
+    avatarUrl: './user-unlogin.png',
+    userInfo: {},
+    logged: false
+  },
   onLaunch: function () {
     
     if (!wx.cloud) {
@@ -10,6 +15,8 @@ App({
       })
     }
 
-    this.globalData = {}
+    this.globalData = {
+      
+    }
   }
 })

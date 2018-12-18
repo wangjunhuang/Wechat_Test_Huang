@@ -1,49 +1,38 @@
 //index.js
 const app = getApp()
-
 Page({
-  data: {
+  data:{
     avatarUrl: './user-unlogin.png',
     userInfo: {},
-    logged: false,
-    takeSession: false,
-    requestResult: ''
   },
-
   onLoad: function() {
-    if (!wx.cloud) {
-      wx.redirectTo({
-        url: '../chooseLib/chooseLib',
-      })
-      return
-    }
-
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              this.setData({
-                avatarUrl: res.userInfo.avatarUrl,
-                userInfo: res.userInfo.getUserInfo
-              })
-            }
-          })
-        }
-      }
-    })
+    this.setData({
+      avatarUrl:app.avatarUrl,
+      userInfo:app.userInfo
+    });
   },
 
-  onGetUserInfo: function(e) {
-    if (!this.logged && e.detail.userInfo) {
-      this.setData({
-        logged: true,
-        avatarUrl: e.detail.userInfo.avatarUrl,
-        userInfo: e.detail.userInfo
-      })
+  featuresChoose: function(e){
+    var type = parseInt(e.target.id);
+    switch (type){
+        case 0://图片操作
+        wx.navigateTo({
+          url: '../image/image',
+        });
+        break; 
+        case 1://网络操作
+        wx.navigateTo({
+          url: '../sockect/sokect',
+        })
+        break;
+        case 2://视频操作
+        break;
+        case 3://数据操作
+        break;
+        case 4://特效操作
+        break;
+
     }
-  },
+  }
 
 })

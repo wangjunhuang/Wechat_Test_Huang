@@ -1,0 +1,8 @@
+<!--miniprogram/loading/loading.wxml-->
+<view class='contianer'>
+ <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="login"
+    >点击登录</button>
+</view>

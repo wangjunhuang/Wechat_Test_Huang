@@ -4,12 +4,12 @@
   <!-- 用户 openid -->
   <view class="userinfo" >
     <button 
-      open-type="getUserInfo" 
       bindgetuserinfo="onGetUserInfo"
       class="userinfo-avatar"
       style="background-image: url({{avatarUrl}})"
     ></button>
-    <text class="userinfo_name">{{userInfo}}</text>
+    <text  class="userinfo_name">{{userInfo.nickName}}</text>
+    <text class="userinfo_gender">{{userInfo.gender==1?"男":"女"}}</text>
     <!-- <view>
       <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
     </view> -->
@@ -19,11 +19,11 @@
   <!-- 功能 -->
     <view class="features" >
     <ul>
-    <li><text>图片操作</text></li>
-    <li><text>网络操作</text></li>
-    <li><text>视频操作</text></li>
-    <li><text>数据操作</text></li>
-    <li><text>特效操作</text></li>
+    <li bindtap="featuresChoose" id="0">图片操作</li>
+    <li>网络操作</li>
+    <li>视频操作</li>
+    <li>数据操作</li>
+    <li>特效操作</li>
     </ul>
     </view>
    

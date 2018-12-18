@@ -1,10 +1,11 @@
 {
   "cloud": true,
   "pages": [
+    "pages/loading/loading",
     "pages/index/index",
-    "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
-    "pages/image/image"
+    "pages/image/image",
+    "pages/sockect/sockect"
   ],
   "window": {
     "disableScroll": true,
