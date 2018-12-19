@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    videoItems:[]
+    videoItems:[],
+    videoUrl:"",
+    videoContent:""
   },
 
 
@@ -15,6 +17,7 @@ Page({
   onLoad: function (options) {
      var images = this.loadImages();
      this.setData({videoItems:images});
+     this.resizeScrollView();
   },
 
   loadImages: function(){
@@ -24,6 +27,7 @@ Page({
     for(var i = 1;i < 21;i++){
        var item = new Object();
        item.title = title+i;
+       item.videoId = i-1;
        item.subTitle = subTitle+i;
        item.image = "./videoImage.jpg";
        images[i-1] = item;
@@ -31,11 +35,52 @@ Page({
     return images;
   },
 
+  resizeScrollView:function(){
+   //屏幕高度
+   var screenHeight ;
+    wx.getSystemInfo({
+      success: function (res) {
+        console.log(res.model)
+        console.log(res.pixelRatio)
+        console.log(res.windowWidth)
+        console.log(res.windowHeight)
+        console.log(res.language)
+        console.log(res.version)
+        console.log(res.platform);
+        screenHeight = res.screenHeight;
+      }
+    })
+
+     
+       const query = wx.createSelectorQuery();
+       query.select("#title2").boundingClientRect();
+      query.selectViewport().scrollOffset();
+      query.exec(function (res) {
+      console.log("------");
+      console.log(res[0]);
+    })
+  },
+
+  tapVideoImage:function(e){
+    var items = this.data["videoItems"];
+    var index = parseInt(e.target.id);
+    var item = items[index];
+    this.setData({videoContent:item.subTitle});
+    this.setData({videoUrl:"https://data.vod.itc.cn/?prod=app&new=/125/206/g586XlZhJQBGTnFDS75cPF.mp4"});
+
+    wx.navigateTo({
+      url: './videoPlay/videoPlay',
+    })
+
+  },
+
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
 
+     
   },
 
   /**

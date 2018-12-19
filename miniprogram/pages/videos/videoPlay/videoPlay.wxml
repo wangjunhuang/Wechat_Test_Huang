@@ -1,0 +1,7 @@
+<!--miniprogram/pages/videos/videoPlay/videoPlay.wxml-->
+<text class='title'>视频播放</text>
+<view class='video2'>
+<video src='{{url}}' controls class='video'></video>
+</view>
+<view class='content'>{{content}}</view>
+

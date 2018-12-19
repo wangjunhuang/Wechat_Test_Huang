@@ -1,0 +1,23 @@
+/* miniprogram/pages/videos/videoPlay/videoPlay.wxss */
+
+page{
+  text-align: center;
+  width: 100%;
+}
+
+.video{
+  width: 300px;
+  height:225px;
+   margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.content{
+  font-size: 12px;
+  width: 80%;
+  text-align: left;
+  line-height: 12px;
+  margin: auto;
+}
+

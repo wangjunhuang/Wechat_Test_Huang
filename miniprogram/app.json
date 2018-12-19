@@ -6,10 +6,11 @@
     "pages/storageConsole/storageConsole",
     "pages/image/image",
     "pages/sockect/sockect",
-    "pages/videos/videos"
+    "pages/videos/videos",
+    "pages/videos/videoPlay/videoPlay"
   ],
   "window": {
-    "disableScroll": true,
+    "disableScroll": false,
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#F6F6F6",
